@@ -1,0 +1,368 @@
+
+*{
+    width: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.75em;
+    text-align: center;
+    font-family: 'Schoolbell', arial;
+}
+
+h2{
+    font-size: 1.875em;
+    text-decoration: underline;
+}
+
+h4{
+    line-height: 2;
+}
+
+
+
+header{
+    min-height: 50px; 
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    float: left;
+    padding-top: 10px;
+}
+
+
+nav{
+    padding-top: 350px;
+    position: absolute;
+    text-align: left;
+    height: 6.25rem;
+}
+
+nav  ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    padding: 1.25em;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-size: 1.70rem;
+    text-transform: uppercase;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #8FBC8F;
+    border-radius: 10px;
+}
+
+
+li a::after{
+    content: '';
+    display: block;
+    height: 0.25rem;
+    width: 0;
+    background: #8FBC8F;
+    transition: all .5s
+}
+
+li a:hover::after{
+    width: 100% ;
+}
+
+main {
+    padding-top: 3.125rem;
+    margin: 6.25rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mission */
+
+#mission {
+    margin-block: 5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.container{
+    min-width: 200px;
+    overflow: hidden;
+    background-image: url(../img/exterior-portrait-kids-world-environment-day.jpg);
+    background-size: cover;
+}
+
+.content{
+    margin: auto;
+    padding: 20px 70px;
+    background-color: rgb(0, 0, 0, 0.4);
+    color: white;
+}
+
+/*Clubs*/
+
+#clubs{
+    background-color:#b2beb5;
+    margin-top: 6.25rem;
+    align-items: center;
+}
+
+.join-club{
+    padding-top: 3.75rem;
+    font-size: 1.875em;
+ }
+
+.club-items{
+    margin-top: 2em;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: auto;
+    justify-content: center;
+}
+
+.item{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform .2s
+}
+
+.item img {
+    max-width: 100%;
+}
+
+.item:hover{
+    transform: scale(1.05); 
+    opacity: 0.8;
+}
+
+.item span {
+    font-size: 1.2em;
+    margin-top: 10px;
+    display: block;
+}
+
+
+/* Summer-Camps*/
+
+#summer-camp{
+    margin-top: 6.25rem;
+    background-image: url(../img/children-participating-treasure-hunt.jpg);
+    background-size: cover;
+
+}
+
+.summer{
+    padding: 40px 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: white;
+    transition: transform .2s
+}
+
+
+.summer:hover{
+    transform: scale(0.9); 
+}
+
+
+/*Contact*/
+
+#contact {
+    margin-top: 6.25rem;
+    background-image: url(../img/full-shot-smiley-teacher-kids-outdoors.jpg);
+    background-size: cover;
+    align-items: center;
+}
+
+.contact-us {
+    line-height: 2.5;
+    padding: 20px 70px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.contact-us ul {
+    color: white;
+    text-align: center;
+    list-style: none;
+    align-items: center;
+}
+
+.contact-us ul li a{
+    color: white;
+    display: inline-block;
+    
+
+}
+
+/* Footer */
+    
+footer {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+
+/* ||MEDIA QUERIES|| */
+
+
+/* -Mobile- */
+
+@media only screen and (max-width: 850px) {
+    body {
+        background-color: white;
+        font-size: 9px;
+        
+    }
+
+    nav{
+        padding: 25px;
+
+    }
+    .logo{
+        position: absolute;
+        top: 20px; 
+        left: 70px;
+    }
+
+    ul {
+        flex-direction: column;
+        width:100%;
+        margin: 30px auto;
+
+    }
+    
+    .toggle-button {
+        display: flex;
+        margin: 110px 110px auto;
+
+    }
+
+    .navbar-links {
+        display: none;
+        width: 2px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        padding: 1px;
+    
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+        font-size: 10px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+        font-weight: bolder;
+        margin-top: 300px;
+        align-items: flex-end;
+        
+    }
+
+    .content{
+        font-size: 12px;
+    }
+
+    #mission,
+    #clubs,
+    #summer-camp,
+    #contact{
+        margin-top: 2rem;
+    }
+
+
+    .club-items{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item img{
+        width:auto;
+        height: auto;
+    }
+
+    .item:hover{
+        transform: scale(0.9); 
+        opacity: 0.8;
+    }
+
+    footer{
+        font-size: 9px;
+    }  
+}
+
+@media only screen and (max-width: 320px){
+
+    .toggle-button{
+        top: 1px;
+        right: -40px;
+    }
+
+    .navbar-links.active{
+        margin: 250px 50px;
+        line-height: 0.5px;
+        margin-bottom: 50px
+            
+    }
+    
+    main{
+        margin: 50px;
+    }
+
+    .logo img{
+        width: 80px;
+        margin-top: 50px;
+        margin-left: -30px;
+    }
+
+    .content,
+    .summer{
+        padding: 15px;
+    }
+    
+}
