@@ -299,7 +299,7 @@ footer {
     .navbar-links.active {
         display: flex;
         font-weight: bolder;
-        margin-top: 300px;
+        margin-top: 18.75rem;
         align-items: flex-end;
         
     }
